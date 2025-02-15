@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <title>Login CloYou</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+    <div class="container-login">
+        <div class="d-flex flex-wrap container-100v justify-content-center">
+            <section class="w-50 d-flex flex-column justify-content-center align-items-center">
+                <h1 class="text-white-m">Accedi a CloYou</h1>
+                <p class="m-visibility text-white-m">CloYou genera i migliori outfit del tuo armadio</p>
+                <form action="/login" method="post" class="form">
+                    <div>
+                        <input type="username" name="username" class="form-control" id="floatingInput" placeholder="Username">
+
+                    </div>
+                    <div>
+                        <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+
+                    </div>
+                    <br>
+                    <button class="btn-green" type="submit" value="Accedi">Accedi</button>
+                    <p class="testo-piccolo space-t-20 text-white-m">Non hai un’account? <a th:href="@{/registrazione}">Registrati</a></p>
+                </form>
+            </section>
+            <section class="w-50 banner-cloyou d-flex align-items-end mobile-not-visibility">
+                <h2 class="text-white pd-text">CloYou genera i migliori outfit del tuo armadio</h2>
+            </section>
+        </div>
+    </div>
+</main>
+<script src="js/script.js"></script>
+
+</body>
+</html>
